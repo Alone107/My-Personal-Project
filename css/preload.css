@@ -1,0 +1,121 @@
+.preload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.preload-wrap {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.preload-info {
+  max-width: 36%;
+}
+
+.preload-subtitle {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: 33rem;
+  letter-spacing: -0.11em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+}
+
+.preload-info-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  margin-bottom: 3rem;
+}
+
+.preload-info-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  margin-bottom: 2rem;
+}
+
+.preload-btn {
+  margin-top: 4rem;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: 22px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+  box-shadow: none;
+  text-decoration: none;
+  padding: 15px 52px;
+}
+
+.preload-subtitle {
+  animation: animation-hi 2s infinite ease-in-out;
+}
+
+@keyframes animation-hi {
+  0% {
+    transform: rotate(-3deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+@media (max-width: 992px) {
+  .preload-subtitle {
+    font-size: 24rem;
+  }
+  .preload-wrap {
+    flex-direction: column;
+  }
+  .preload-info {
+    max-width: 75%;
+    text-align: center;
+  }
+  .preload-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 656px) {
+  .preload-subtitle {
+    font-size: 9rem;
+  }
+  .preload-info-title {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .preload-btn {
+    font-size: 1rem;
+    padding: 15px 36px;
+    margin-top: 2rem;
+  }
+  .preload-info-text {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=preload.css.map */

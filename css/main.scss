@@ -1,0 +1,102 @@
+:root {
+  --font-family: "Iceland", sans-serif;
+  --second-family: "Big Shoulders Display", sans-serif;
+  --third-family: "Iceberg", sans-serif;
+  --font3: "SF Pro Display", sans-serif;
+  --font4: "Font Awesome 6 Brands", sans-serif;
+  --font5: "Inter", sans-serif;
+  --theme-color: #e84a4a;
+  --theme-color-second: #fff;
+  --green-color: #7dff68;
+  --grey-color: #7a7a7a;
+  --transition: all 0.5s;
+  --text-small: 7px;
+  --text-smaller: 12px;
+  --text: 14px;
+  --text-medium: 16px;
+  --text-big: 18px;
+  --text-BIG: 26px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--text-medium);
+  color: var(--grey-color);
+}
+
+.main-wrap {
+  height: 100vh;
+  perspective: 1000px;
+  z-index: 2;
+  position: relative;
+}
+
+.btn-hover {
+  transition: var(--transition);
+}
+
+.btn-hover:hover {
+  border-color: var(--theme-color-second);
+  color: var(--theme-color-second);
+}
+
+.btn-hover:hover path {
+  fill: var(--theme-color-second);
+}
+
+.container-wrap {
+  padding-left: 78px;
+  padding-right: 78px;
+  margin: 0 auto;
+  height: 100vh;
+  transition: all 1.9s;
+}
+
+.container-wrap.open {
+  transform: rotateY(-35deg);
+  transform-origin: right;
+}
+
+.container-wrap.openDown {
+  transform: rotateX(35deg);
+  transform-origin: bottom;
+}
+
+.wrap {
+  position: relative;
+  background: #000003;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.wrap:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../images/bg-firtst-page.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33%;
+  height: 100%;
+  max-height: 33%;
+}
+
+.shadow {
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00000357;
+}
+
+.shadow.open {
+  opacity: 1;
+  pointer-events: visible;
+}

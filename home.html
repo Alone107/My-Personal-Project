@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Iceberg&family=Iceland&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/global/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main-wrap">
+        <div class="container-wrap">
+          <div class="top">
+            <div class="top-left">
+              <div class="level">
+                <span>48</span>
+                <p>Level</p>
+              </div>
+              <div class="coins-row">
+                <a href="#" class="coins-plus">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.147 10.595V6.448H0V4.147H4.147V0H6.461V4.147H10.608V6.448H6.461V10.595H4.147Z"
+                      fill="#E84A4A"
+                    />
+                  </svg>
+                </a>
+                <div class="coins-info">
+                  <span>1,425</span>
+                  <p>coins awarded</p>
+                </div>
+              </div>
+            </div>
+            <div class="top-right">
+              <button id="CreditsBtn" class="top-right-credits">credits</button>
+              <div class="top-right-servertime">
+                server time: <span id="time-moskow">8:42</span>
+              </div>
+              <div class="top-right-time">
+                local time: <span id="time">15:42</span>
+              </div>
+            </div>
+          </div>
+          <div class="center">
+            <div class="center-left">
+              <div class="avatar-wrap">
+                <div class="avatar">
+                  <div class="avatar-bg avatar-svg">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 9L1 1L9 1"
+                        stroke="#E84A4A"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div class="avatar-bg-2 avatar-svg">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 1L8 1L8 9"
+                        stroke="#E84A4A"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div class="avatar-bg-3 avatar-svg">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 8L1 8L0.999999 6.99382e-07"
+                        stroke="#E84A4A"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div class="avatar-bg-4 avatar-svg">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 0L8 8L1.04907e-06 8"
+                        stroke="#E84A4A"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <img src="images/avatar.png" alt="" />
+                </div>
+                <div class="avatar-info">
+                  <div class="avatar-block">
+                    <div class="avatar-block-title">NAME</div>
+                    <div class="avatar-block-desc">Luz Wintheiser</div>
+                  </div>
+                  <div class="avatar-block">
+                    <div class="avatar-block-title">occupation</div>
+                    <div class="avatar-block-desc">web developer</div>
+                  </div>
+                  <div class="avatar-block">
+                    <div class="avatar-block-title">corporation</div>
+                    <div class="avatar-block-desc">Legacy.ai</div>
+                  </div>
+                  <div class="avatar-block">
+                    <div class="avatar-block-title">availability</div>
+                    <button id="hireBtn" class="avatar-btn btn-hover hire">
+                      open for hire
+                      <div class="avatar-rectangle">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none"
+                        >
+                          <path
+                            opacity="0.7"
+                            d="M22.4883 30.3965L16.9668 39.96H5.9248L0.40332 30.3965L5.92383 20.833H16.9668L22.4883 30.3965ZM1.55762 30.3965L6.50098 38.959H16.3896L21.334 30.3955L16.3896 21.833H6.50098L1.55762 30.3965ZM39.9521 20.3135L34.4307 29.8779L23.3877 29.877L17.8662 20.3135L23.3877 10.75H34.4307L39.9521 20.3135ZM19.0205 20.3135L23.9648 28.877H33.8535L38.7969 20.3135L33.8535 11.75H23.9648L19.0205 20.3135ZM16.6953 1.03027L16.6973 1.03125L22.2188 10.5947H22.2178L17.0566 19.9502L6.37402 19.7422L0.852539 10.1787L6.01367 0.823242L16.6953 1.03027ZM2.00098 10.168L6.95703 18.7529L16.4717 18.9385L21.0693 10.6045L16.1133 2.01953L6.59766 1.83496L2.00098 10.168Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="avatar-block">
+                    <div class="avatar-block-title">social</div>
+                    <button id="ConnectBtn" class="avatar-btn btn-hover social">
+                      <span>open connection</span>
+                      <div class="social-svg">
+                        <svg
+                          width="14"
+                          height="21"
+                          viewBox="0 0 14 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.34102 10.0301L13.684 14.3731L8.02802 20.0291H6.02802V13.3431L1.66402 17.7071L0.249023 16.2931L6.02802 10.5151V9.54505L0.249023 3.76505L1.66402 2.35105L6.02802 6.71505V0.0290527H8.02802L13.684 5.68605L9.34102 10.0301ZM8.02802 11.5441V17.2011L10.856 14.3731L8.02802 11.5441ZM8.02802 8.51405L10.856 5.68605L8.02802 2.85805V8.51505V8.51405Z"
+                            fill="#E84A4A"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="description-wrap">
+                <div class="description-span">Motto:</div>
+                <div class="description-text">
+                  Saepe omnis neque numquam recusandae laudantium.
+                </div>
+              </div>
+            </div>
+            <div class="center-main">
+              <div class="center-wrap">
+                <div class="avatar-bg avatar-svg">
+                  <svg
+                    width="9"
+                    height="9"
+                    viewBox="0 0 9 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 9L1 1L9 1" stroke="#E84A4A" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="avatar-bg-2 avatar-svg">
+                  <svg
+                    width="9"
+                    height="9"
+                    viewBox="0 0 9 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 1L8 1L8 9" stroke="#E84A4A" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="avatar-bg-3 avatar-svg">
+                  <svg
+                    width="9"
+                    height="9"
+                    viewBox="0 0 9 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 8L1 8L0.999999 6.99382e-07"
+                      stroke="#E84A4A"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <div class="avatar-bg-4 avatar-svg">
+                  <svg
+                    width="9"
+                    height="9"
+                    viewBox="0 0 9 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 0L8 8L1.04907e-06 8"
+                      stroke="#E84A4A"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <img src="images/kit.png" alt="" />
+              </div>
+              <div class="center-text">
+                <div class="center-title">
+                  swimming through a vast network of interconnected devices and
+                  servers, spreading joy and whimsy to users across the globe
+                </div>
+                <div class="center-desc">Artwork generated with midjourney</div>
+              </div>
+            </div>
+            <div class="center-right">
+              <div class="active-quest">
+                <div class="active-quest-row">
+                  active quest
+                  <div class="avatar-rectangle">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                    >
+                      <path
+                        opacity="0.7"
+                        d="M22.4883 30.3965L16.9668 39.96H5.9248L0.40332 30.3965L5.92383 20.833H16.9668L22.4883 30.3965ZM1.55762 30.3965L6.50098 38.959H16.3896L21.334 30.3955L16.3896 21.833H6.50098L1.55762 30.3965ZM39.9521 20.3135L34.4307 29.8779L23.3877 29.877L17.8662 20.3135L23.3877 10.75H34.4307L39.9521 20.3135ZM19.0205 20.3135L23.9648 28.877H33.8535L38.7969 20.3135L33.8535 11.75H23.9648L19.0205 20.3135ZM16.6953 1.03027L16.6973 1.03125L22.2188 10.5947H22.2178L17.0566 19.9502L6.37402 19.7422L0.852539 10.1787L6.01367 0.823242L16.6953 1.03027ZM2.00098 10.168L6.95703 18.7529L16.4717 18.9385L21.0693 10.6045L16.1133 2.01953L6.59766 1.83496L2.00098 10.168Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="active-quest-row-2">the react skill-up line</div>
+                <div class="active-quest-block">
+                  <div class="active-quest-subtitle">quest name</div>
+                  <div class="active-quest-name">React website</div>
+                </div>
+                <div class="active-quest-block">
+                  <div class="active-quest-subtitle">goal</div>
+                  <div class="active-quest-text">
+                    Build this website. Implement a full react website with
+                    multiple routers, UI elements and tricky styling. Make it
+                    all work great!
+                  </div>
+                </div>
+                <div class="active-quest-block">
+                  <div class="active-quest-subtitle">React website</div>
+                  <div class="rewards">
+                    <div class="rewards-item">
+                      <img src="images/rewards-1.png" alt="" />
+                      <span>+5</span>
+                    </div>
+                    <div class="rewards-item">
+                      <img src="images/rewards-2.png" alt="" />
+                      <span>+25</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="settings">
+                <div class="setting-sound setting-hover">
+                  <span>sound effects</span>
+                  <div class="check">
+                    <svg
+                      width="18"
+                      height="13"
+                      viewBox="0 0 18 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.99999 10.172L16.192 0.979004L17.607 2.393L6.99999 13L0.635986 6.636L2.04999 5.222L6.99999 10.172Z"
+                        fill="#E84A4A"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="setting-music setting-hover off">
+                  music<span></span>
+                  <div class="close">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.99999 5.58599L11.95 0.635986L13.364 2.04999L8.41399 6.99999L13.364 11.95L11.95 13.364L6.99999 8.41399L2.04999 13.364L0.635986 11.95L5.58599 6.99999L0.635986 2.04999L2.04999 0.635986L6.99999 5.58599Z"
+                        fill="#E84A4A"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div id="SettingsBtn" class="setting-visual setting-hover">
+                  <span>visual settings</span>
+                  <div class="gear">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.34006 14.9999C0.917331 14.2689 0.588725 13.4874 0.362061 12.6739C0.855368 12.423 1.26965 12.0406 1.55909 11.5688C1.84852 11.0971 2.00183 10.5545 2.00203 10.0011C2.00224 9.44761 1.84934 8.90489 1.56026 8.43295C1.27118 7.961 0.85718 7.57821 0.364061 7.32694C0.816097 5.69243 1.67679 4.1999 2.86506 2.98994C3.32915 3.29167 3.86768 3.45911 4.42104 3.47373C4.9744 3.48834 5.52101 3.34958 6.00039 3.07278C6.47977 2.79598 6.87321 2.39194 7.13719 1.90539C7.40116 1.41883 7.52537 0.868721 7.49606 0.315945C9.13817 -0.108433 10.8613 -0.107745 12.5031 0.317945C12.474 0.87071 12.5985 1.42073 12.8626 1.90715C13.1268 2.39357 13.5204 2.79742 13.9999 3.07401C14.4794 3.35059 15.026 3.48913 15.5793 3.4743C16.1327 3.45946 16.6711 3.29183 17.1351 2.98994C17.7141 3.57994 18.2281 4.25095 18.6601 4.99995C19.0931 5.74895 19.4171 6.52995 19.6381 7.32595C19.1448 7.57685 18.7305 7.95932 18.441 8.43105C18.1516 8.90278 17.9983 9.44538 17.9981 9.99883C17.9979 10.5523 18.1508 11.095 18.4399 11.5669C18.7289 12.0389 19.1429 12.4217 19.6361 12.6729C19.184 14.3075 18.3233 15.8 17.1351 17.0099C16.671 16.7082 16.1324 16.5408 15.5791 16.5262C15.0257 16.5115 14.4791 16.6503 13.9997 16.9271C13.5204 17.2039 13.1269 17.6079 12.8629 18.0945C12.599 18.5811 12.4748 19.1312 12.5041 19.6839C10.862 20.1083 9.13883 20.1076 7.49706 19.6819C7.52611 19.1292 7.40166 18.5792 7.13748 18.0927C6.8733 17.6063 6.4797 17.2025 6.00023 16.9259C5.52076 16.6493 4.97412 16.5108 4.42079 16.5256C3.86746 16.5404 3.32902 16.7081 2.86506 17.0099C2.27405 16.4069 1.76166 15.7315 1.34006 14.9999ZM7.00006 15.1959C8.06569 15.8106 8.86691 16.797 9.25006 17.9659C9.74906 18.0129 10.2501 18.0139 10.7491 17.9669C11.1325 16.7978 11.9341 15.8114 13.0001 15.1969C14.0653 14.5806 15.3206 14.3794 16.5251 14.6319C16.8151 14.2239 17.0651 13.7889 17.2731 13.3339C16.4525 12.4174 15.9992 11.2302 16.0001 9.99994C16.0001 8.73994 16.4701 7.56295 17.2731 6.66595C17.0636 6.21109 16.8125 5.77658 16.5231 5.36795C15.3193 5.62025 14.0649 5.41942 13.0001 4.80395C11.9344 4.18932 11.1332 3.20293 10.7501 2.03394C10.2511 1.98694 9.75006 1.98594 9.25106 2.03294C8.86766 3.20209 8.06606 4.1885 7.00006 4.80295C5.93484 5.41926 4.67954 5.62046 3.47506 5.36795C3.18563 5.77623 2.93519 6.21081 2.72706 6.66595C3.54763 7.5825 4.00094 8.76974 4.00006 9.99994C4.00006 11.2599 3.53006 12.4369 2.72706 13.3339C2.93653 13.7888 3.1876 14.2233 3.47706 14.6319C4.68078 14.3796 5.93527 14.5805 7.00006 15.1959ZM10.0001 12.9999C9.20441 12.9999 8.44135 12.6839 7.87874 12.1213C7.31613 11.5587 7.00006 10.7956 7.00006 9.99994C7.00006 9.2043 7.31613 8.44123 7.87874 7.87862C8.44135 7.31602 9.20441 6.99995 10.0001 6.99995C10.7957 6.99995 11.5588 7.31602 12.1214 7.87862C12.684 8.44123 13.0001 9.2043 13.0001 9.99994C13.0001 10.7956 12.684 11.5587 12.1214 12.1213C11.5588 12.6839 10.7957 12.9999 10.0001 12.9999ZM10.0001 10.9999C10.2653 10.9999 10.5196 10.8946 10.7072 10.7071C10.8947 10.5195 11.0001 10.2652 11.0001 9.99994C11.0001 9.73473 10.8947 9.48037 10.7072 9.29284C10.5196 9.1053 10.2653 8.99994 10.0001 8.99994C9.73484 8.99994 9.48049 9.1053 9.29295 9.29284C9.10542 9.48037 9.00006 9.73473 9.00006 9.99994C9.00006 10.2652 9.10542 10.5195 9.29295 10.7071C9.48049 10.8946 9.73484 10.9999 10.0001 10.9999Z"
+                        fill="#E84A4A"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <nav class="navigation">
+                <div class="navigation-item active">
+                  <a href="home.html" class="navigation-item-link"></a>
+                  <div class="navigation-title">
+                    beginning
+                    <div class="avatar-rectangle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                      >
+                        <path
+                          opacity="0.7"
+                          d="M22.4883 30.3965L16.9668 39.96H5.9248L0.40332 30.3965L5.92383 20.833H16.9668L22.4883 30.3965ZM1.55762 30.3965L6.50098 38.959H16.3896L21.334 30.3955L16.3896 21.833H6.50098L1.55762 30.3965ZM39.9521 20.3135L34.4307 29.8779L23.3877 29.877L17.8662 20.3135L23.3877 10.75H34.4307L39.9521 20.3135ZM19.0205 20.3135L23.9648 28.877H33.8535L38.7969 20.3135L33.8535 11.75H23.9648L19.0205 20.3135ZM16.6953 1.03027L16.6973 1.03125L22.2188 10.5947H22.2178L17.0566 19.9502L6.37402 19.7422L0.852539 10.1787L6.01367 0.823242L16.6953 1.03027ZM2.00098 10.168L6.95703 18.7529L16.4717 18.9385L21.0693 10.6045L16.1133 2.01953L6.59766 1.83496L2.00098 10.168Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="navigation-desc">
+                    Suscipit est consequatur nemo voluptatem est labore saepe.
+                  </div>
+                </div>
+                <div class="navigation-item">
+                  <a href="quest-log.html" class="navigation-item-link"></a>
+                  <div class="navigation-title">
+                    Logs
+                    <div class="avatar-rectangle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                      >
+                        <path
+                          opacity="0.7"
+                          d="M22.4883 30.3965L16.9668 39.96H5.9248L0.40332 30.3965L5.92383 20.833H16.9668L22.4883 30.3965ZM1.55762 30.3965L6.50098 38.959H16.3896L21.334 30.3955L16.3896 21.833H6.50098L1.55762 30.3965ZM39.9521 20.3135L34.4307 29.8779L23.3877 29.877L17.8662 20.3135L23.3877 10.75H34.4307L39.9521 20.3135ZM19.0205 20.3135L23.9648 28.877H33.8535L38.7969 20.3135L33.8535 11.75H23.9648L19.0205 20.3135ZM16.6953 1.03027L16.6973 1.03125L22.2188 10.5947H22.2178L17.0566 19.9502L6.37402 19.7422L0.852539 10.1787L6.01367 0.823242L16.6953 1.03027ZM2.00098 10.168L6.95703 18.7529L16.4717 18.9385L21.0693 10.6045L16.1133 2.01953L6.59766 1.83496L2.00098 10.168Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="navigation-desc">
+                    Suscipit est consequatur nemo voluptatem est labore saepe.
+                  </div>
+                </div>
+                <div class="navigation-item">
+                  <a href="#" class="navigation-item-link"></a>
+                  <div class="navigation-title">
+                    achievements
+                    <div class="avatar-rectangle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                      >
+                        <path
+                          opacity="0.7"
+                          d="M22.4883 30.3965L16.9668 39.96H5.9248L0.40332 30.3965L5.92383 20.833H16.9668L22.4883 30.3965ZM1.55762 30.3965L6.50098 38.959H16.3896L21.334 30.3955L16.3896 21.833H6.50098L1.55762 30.3965ZM39.9521 20.3135L34.4307 29.8779L23.3877 29.877L17.8662 20.3135L23.3877 10.75H34.4307L39.9521 20.3135ZM19.0205 20.3135L23.9648 28.877H33.8535L38.7969 20.3135L33.8535 11.75H23.9648L19.0205 20.3135ZM16.6953 1.03027L16.6973 1.03125L22.2188 10.5947H22.2178L17.0566 19.9502L6.37402 19.7422L0.852539 10.1787L6.01367 0.823242L16.6953 1.03027ZM2.00098 10.168L6.95703 18.7529L16.4717 18.9385L21.0693 10.6045L16.1133 2.01953L6.59766 1.83496L2.00098 10.168Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="navigation-desc">
+                    Suscipit est consequatur nemo voluptatem est labore saepe.
+                  </div>
+                </div>
+                <div class="navigation-item">
+                  <a href="#" class="navigation-item-link"></a>
+                  <div class="navigation-title">
+                    creations
+                    <div class="avatar-rectangle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                      >
+                        <path
+                          opacity="0.7"
+                          d="M22.4883 30.3965L16.9668 39.96H5.9248L0.40332 30.3965L5.92383 20.833H16.9668L22.4883 30.3965ZM1.55762 30.3965L6.50098 38.959H16.3896L21.334 30.3955L16.3896 21.833H6.50098L1.55762 30.3965ZM39.9521 20.3135L34.4307 29.8779L23.3877 29.877L17.8662 20.3135L23.3877 10.75H34.4307L39.9521 20.3135ZM19.0205 20.3135L23.9648 28.877H33.8535L38.7969 20.3135L33.8535 11.75H23.9648L19.0205 20.3135ZM16.6953 1.03027L16.6973 1.03125L22.2188 10.5947H22.2178L17.0566 19.9502L6.37402 19.7422L0.852539 10.1787L6.01367 0.823242L16.6953 1.03027ZM2.00098 10.168L6.95703 18.7529L16.4717 18.9385L21.0693 10.6045L16.1133 2.01953L6.59766 1.83496L2.00098 10.168Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="navigation-desc">
+                    Suscipit est consequatur nemo voluptatem est labore saepe.
+                  </div>
+                </div>
+                <div class="navigation-item">
+                  <a href="#" class="navigation-item-link"></a>
+                  <div class="navigation-title">
+                    games
+                    <div class="avatar-rectangle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                      >
+                        <path
+                          opacity="0.7"
+                          d="M22.4883 30.3965L16.9668 39.96H5.9248L0.40332 30.3965L5.92383 20.833H16.9668L22.4883 30.3965ZM1.55762 30.3965L6.50098 38.959H16.3896L21.334 30.3955L16.3896 21.833H6.50098L1.55762 30.3965ZM39.9521 20.3135L34.4307 29.8779L23.3877 29.877L17.8662 20.3135L23.3877 10.75H34.4307L39.9521 20.3135ZM19.0205 20.3135L23.9648 28.877H33.8535L38.7969 20.3135L33.8535 11.75H23.9648L19.0205 20.3135ZM16.6953 1.03027L16.6973 1.03125L22.2188 10.5947H22.2178L17.0566 19.9502L6.37402 19.7422L0.852539 10.1787L6.01367 0.823242L16.6953 1.03027ZM2.00098 10.168L6.95703 18.7529L16.4717 18.9385L21.0693 10.6045L16.1133 2.01953L6.59766 1.83496L2.00098 10.168Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="navigation-desc">
+                    Suscipit est consequatur nemo voluptatem est labore saepe.
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="hire-popup">
+          <div class="hire-title">open for hire</div>
+          <div class="hire-subtitle">
+            I would love to hear about your projects!
+          </div>
+          <form class="form-popup" action="">
+            <div class="hire-block">
+              <div class="hire-row">
+                <label for="hire-name">How should I call you?</label>
+                <input id="hire-name" type="text" placeholder="your name" />
+              </div>
+              <div class="hire-row">
+                <label for="hire-email">Sending from</label>
+                <input
+                  id="hire-email"
+                  type="email"
+                  placeholder="your.name@acme.com"
+                />
+              </div>
+              <div class="hire-row">
+                <label for="hire-textarea">transmitted data</label>
+                <textarea
+                  name=""
+                  id="hire-textarea"
+                  placeholder="Hi, I write to you about ..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="hire-buttons">
+              <button class="btn-submit" type="submit">
+                send message [enter]
+              </button>
+              <button id="btnHireReset" class="btn-reset" type="reset">
+                discard [esc]
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="connect-popup">
+          <div class="connect-title">connect with me</div>
+          <div class="connect-subtitle">
+            wanna chat? Or just share something cool?
+          </div>
+          <form class="form-popup" action="">
+            <div class="connect-block">
+              <div class="connect-row">
+                <label for="connect-name">How should I call you?</label>
+                <input id="connect-name" type="text" placeholder="your name" />
+              </div>
+              <div class="connect-row">
+                <label for="connect-email">Sending from</label>
+                <input
+                  id="connect-email"
+                  type="email"
+                  placeholder="your.name@acme.com"
+                />
+              </div>
+              <div class="connect-row">
+                <label for="connect-textarea">transmitted data</label>
+                <textarea
+                  name=""
+                  id="connect-textarea"
+                  placeholder="Hi, I write to you about ..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="connect-buttons">
+              <button class="btn-submit" type="submit">
+                send message [enter]
+              </button>
+              <button id="btnConnectReset" class="btn-reset" type="reset">
+                discard [esc]
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="credits-popup">
+          <div class="credits-title">Credits</div>
+          <div class="credits-subtitle">
+            Everything involved in this project
+          </div>
+          <div class="credits-row">
+            <div class="credits-row-left">developed by</div>
+            <div class="credits-row-right">your name here @handle</div>
+          </div>
+          <div class="credits-row">
+            <div class="credits-row-left">designed by</div>
+            <div class="credits-row-right">alex dimitrov @xavortm</div>
+          </div>
+          <div class="credits-row">
+            <div class="credits-row-left">visual assets</div>
+            <div class="credits-row-right">
+              homepage view, achievements by midjourney icons from remixicons
+              and fontawesome hexagons by @xavortm
+            </div>
+          </div>
+          <div class="credits-row">
+            <div class="credits-row-left">audio effects</div>
+            <div class="credits-row-right">
+              click, hover, typing and all other audio effects by mixkit.co
+            </div>
+          </div>
+          <div class="credits-row">
+            <div class="credits-row-left">music</div>
+            <div class="credits-row-right">
+              “tea Fragrance” by Adeline Yeo (HP), Never forget “pressure” by
+              Eggy Toast, Shed Roof “We were kids” by HolinzaPATREON, never
+              forget
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-popup">
+          <div class="settings-title">visual configurator</div>
+          <div class="settings-subtitle">apply what works best for you</div>
+
+          <div class="settings-block">
+            <div class="settings-row">
+              <div class="settings-row-title">
+                <div class="setting-title">HUD HUE</div>
+                <div class="setting-span">
+                  Color: <span id="SpanColorOneSlider">#e84a4a</span>
+                </div>
+              </div>
+              <div class="slider-input">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  step="10"
+                  id="sliderSettingsOne"
+                  class="sliderSettings"
+                />
+                <div id="selectorSliderOne" class="selectorSlider">
+                  <div id="selectBtnColorOne" class="selectBtn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-title">
+                <div class="setting-title">HUD HUE TWO</div>
+                <div class="setting-span">
+                  Color: <span id="SpanColorTwoSlider">#ffffff</span>
+                </div>
+              </div>
+              <div class="slider-input">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  step="10"
+                  id="sliderSettingsTwo"
+                  class="sliderSettings"
+                />
+                <div id="selectorSliderTwo" class="selectorSlider">
+                  <div id="selectBtnColorTwo" class="selectBtn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-title">
+                <div class="setting-title">Text scale</div>
+                <div class="setting-span setting-span-text">
+                  Largest: <span id="largestValue">26px</span>
+                  <span>Smallest: <span id="smallestValue">7px</span> </span>
+                </div>
+              </div>
+              <div class="slider-input">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  step="10"
+                  value="50"
+                  id="sliderSettingsThree"
+                  class="sliderSettings"
+                />
+                <div id="selectorSliderThree" class="selectorSlider">
+                  <div id="selectBtnColorThree" class="selectBtn"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="setting-warning">
+              <div class="setting-warning-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_1768)">
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z"
+                      fill="#E84A4A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_1768">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="setting-warning-text">
+                The configuration data is stored in your browser. If you login
+                from a different browser or machine, your settings will not
+                apply.
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-buttons">
+            <button id="btnSettingsComplete" class="btn-submit" type="submit">
+              write to disk [enter]
+            </button>
+            <button id="btnSettingsReset" class="btn-reset" type="reset">
+              discard [esc]
+            </button>
+          </div>
+        </div>
+
+        <div class="shadow"></div>
+      </div>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>

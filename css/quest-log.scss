@@ -1,0 +1,226 @@
+.center-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text-big);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--theme-color-second);
+  margin-bottom: 35px;
+  margin-top: 30px;
+}
+
+.block-log {
+  margin-bottom: 18px;
+}
+
+.block-log-row {
+  padding: 0 4px;
+  margin-bottom: 6px;
+  background: var(--theme-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-log-title {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-big);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #080306;
+}
+
+.block-log-date {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: var(--text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #080306;
+}
+
+.block-log-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.block-log-list li span {
+  color: var(--theme-color-second);
+}
+
+.block-log-list li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text-medium);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--grey-color);
+}
+
+.block-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.block-grid-item {
+  padding: 15px 13px 14px 18px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  position: relative;
+  clip-path: polygon(0 10px, 10px 0, 100% 0, 100% 100%, 0 100%);
+  transition: var(--transition);
+}
+
+.block-grid-item:hover {
+  border-color: var(--theme-color-second);
+}
+
+.block-grid-item:hover::before {
+  border-color: var(--theme-color-second);
+}
+
+.block-grid-item:hover .block-grid-item-text {
+  color: var(--theme-color-second);
+  opacity: 0.7;
+}
+
+.block-grid-item::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 0px;
+  left: -3px;
+  top: 4px;
+  transform: rotate(135deg);
+  border-left: 1px solid rgba(255, 255, 255, 0.13);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  transition: var(--transition);
+}
+
+.block-grid-item-title {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-big);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  margin-bottom: 4px;
+}
+
+.block-grid-item-text {
+  font-size: var(--text);
+  text-transform: uppercase;
+  color: var(--grey-color);
+  transition: var(--transition);
+}
+
+.block-grid-item-more {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text);
+  text-transform: uppercase;
+  color: var(--theme-color);
+  margin-top: 5px;
+  display: block;
+  background: transparent;
+  transition: var(--transition);
+}
+
+.block-grid-item-more:hover {
+  color: var(--theme-color-second);
+}
+
+.visual-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  max-width: fit-content;
+  width: 100%;
+  border: 1px solid var(--theme-color);
+  padding: 5px 5px 6px 6px;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-big);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  margin: 0 auto 47px;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.visual-btn:hover {
+  border-color: var(--theme-color-second);
+  color: var(--theme-color-second);
+}
+
+.visual-btn:hover path {
+  fill: var(--theme-color-second);
+}
+
+.visual-btn svg {
+  max-width: 24px;
+  transition: var(--transition);
+}
+
+.visual-btn svg path {
+  transition: var(--transition);
+}
+
+.older-logs li a {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  border: 1px solid var(--theme-color);
+  margin-bottom: 6px;
+  padding: 1px 4px;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.older-logs li a:hover {
+  color: var(--theme-color-second);
+  border-color: var(--theme-color-second);
+}
+
+.older-logs li a:hover p {
+  color: var(--theme-color-second);
+}
+
+.older-logs li a:hover span {
+  color: var(--theme-color-second);
+}
+
+.older-logs li a p {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-big);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  margin-bottom: 0;
+  transition: var(--transition);
+}
+
+.older-logs li a span {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: var(--text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  transition: var(--transition);
+}
+
+.quest-container {
+  max-width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,150 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 3%;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+}
+
+.level {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-medium);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  display: flex;
+  align-items: end;
+  gap: 5%;
+}
+
+.level p {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-medium);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  opacity: 0.6;
+}
+
+.level span {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-BIG);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--green-color);
+}
+
+.coins-row {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+}
+
+.coins-plus {
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+}
+
+.coins-plus path {
+  fill: var(--theme-color);
+}
+
+.coins-info {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-medium);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  display: flex;
+  align-items: end;
+  gap: 1%;
+  width: 100%;
+}
+
+.coins-info p {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-medium);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  opacity: 0.6;
+}
+
+.coins-info span {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-BIG);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--green-color);
+}
+
+.top-right {
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+
+.top-right-credits {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: var(--text-smaller);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 2;
+  background: transparent;
+}
+
+.top-right-credits:hover {
+  opacity: 0.8;
+}
+
+.top-right-servertime {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--grey-color);
+}
+
+.top-right-servertime span {
+  color: var(--theme-color-second);
+}
+
+.top-right-time {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--grey-color);
+}
+
+.top-right-time span {
+  color: var(--theme-color-second);
+}/*# sourceMappingURL=top.css.map */
