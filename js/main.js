@@ -353,3 +353,153 @@ if (sliderTwoColor) {
     )
   );
 }
+
+//--------------filtr-achievements---------------------
+
+const achievementsAchievedComplete = document.querySelector(
+  ".achievements-achieved-complete"
+);
+
+const achievementsAchievedProgress = document.getElementById(
+  "achievementsAchievedProgress"
+);
+
+const achievementsBlocks = document.getElementById("achievementsBlocks");
+
+const inputFiltrAchieved = document.getElementById("achieved-input");
+const inputFiltrInProgress = document.getElementById("in-progress-input");
+
+const inputFiltrTodo = document.getElementById("todo-input");
+
+if (inputFiltrAchieved) {
+  inputFiltrAchieved.addEventListener("input", function () {
+    if (inputFiltrAchieved.checked == true) {
+      achievementsAchievedComplete.classList.add("show");
+    } else {
+      achievementsAchievedComplete.classList.remove("show");
+    }
+  });
+}
+
+if (inputFiltrInProgress) {
+  inputFiltrInProgress.addEventListener("input", function () {
+    if (inputFiltrInProgress.checked == true) {
+      achievementsAchievedProgress.classList.add("show");
+    } else {
+      achievementsAchievedProgress.classList.remove("show");
+    }
+  });
+}
+
+if (inputFiltrTodo) {
+  inputFiltrTodo.addEventListener("input", function () {
+    if (inputFiltrTodo.checked == true) {
+      achievementsBlocks.classList.add("todo");
+    } else {
+      achievementsBlocks.classList.remove("todo");
+    }
+  });
+}
+
+// -----------------progress-circle----------------------
+
+const achivmentsBlock = document.querySelectorAll(
+  ".achievements-achieved-progress-item"
+);
+const filterTwo = document.getElementById("achieved-inprogress");
+
+const circle = document.querySelector(".progress-ring-circle");
+
+if (circle) {
+  const radius = circle.r.baseVal.value;
+
+  const circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = `${circumference}`;
+
+  function setProgress(percent) {
+    const ofset = circumference - (percent / 100) * circumference;
+    circle.style.strokeDashoffset = ofset;
+  }
+
+  let allChallenge = achivmentsBlock.length;
+  let finishChallenge = 0;
+
+  for (let i = 0; i < filterTwo.childNodes.length; i++) {
+    if (filterTwo.childNodes[i].tagName == "DIV") {
+      finishChallenge++;
+    }
+    finishChallenge;
+  }
+
+  let percents = Math.round((finishChallenge / allChallenge) * 100);
+  document.querySelector(
+    ".achievements-progress-number"
+  ).innerHTML = `${finishChallenge}/${allChallenge}`;
+
+  let percentFinish = setProgress(percents);
+}
+
+// -------------------projects-slider------------------------------
+
+const swiperProjects = document.querySelector(".swiper-projects");
+
+if (swiperProjects) {
+  const swiperProjects = new Swiper(".swiper-projects", {
+    // Optional parameters
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: 0,
+    coverflowEffect: {
+      rotate: -45,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      scale: 0.8,
+      slideShadows: true,
+    },
+    effect: "coverflow",
+    grabCursor: true,
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination--projects",
+      type: "fraction",
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next-projects",
+      prevEl: ".swiper-button-prev-projects",
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+}
+
+// Получаем элементы
+const projectInfo = document.querySelector(".single-project-information-text");
+const toggleBtn = document.querySelector(".single-project-show-text");
+
+// Проверяем высоту и устанавливаем начальное состояние
+if (projectInfo.offsetHeight > 200) {
+  projectInfo.setAttribute("data-expanded", "false");
+  projectInfo.classList.add("hidden");
+  toggleBtn.classList.add("show");
+}
+
+// Обработчик события
+toggleBtn.addEventListener("click", function () {
+  const isExpanded = projectInfo.getAttribute("data-expanded") === "true";
+
+  // Обновляем атрибуты и классы
+  projectInfo.setAttribute("data-expanded", !isExpanded);
+  projectInfo.classList.toggle("hidden");
+
+  // Обновляем текст кнопки
+  toggleBtn.textContent = isExpanded ? "+ expand" : "- expand";
+});

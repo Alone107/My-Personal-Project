@@ -1,0 +1,236 @@
+.projects-images {
+  position: relative;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
+
+.projects-images:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: rgb(0 0 0 / 80%);
+}
+
+.time-publidshed {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  margin-bottom: 3vw;
+  display: block;
+}
+
+.projects-blur {
+  backdrop-filter: blur(26px);
+
+  padding: 17px 18px 16px 19px;
+  z-index: 2;
+  position: relative;
+}
+
+.projects-img {
+  margin-bottom: 3vw;
+}
+
+.projects-img img {
+  width: 100%;
+}
+
+.project-link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  padding: 10px 11px;
+  border: 1px solid var(--theme-color);
+  display: block;
+  margin-left: auto;
+  max-width: fit-content;
+}
+
+.slide-projects .avatar-bg svg,
+.slide-projects .avatar-bg-2 svg,
+.slide-projects .avatar-bg-3 svg,
+.slide-projects .avatar-bg-4 svg {
+  width: 14px;
+  height: 14px;
+}
+
+.slide-projects .avatar-bg,
+.slide-projects .avatar-bg-2,
+.slide-projects .avatar-bg-3,
+.slide-projects .avatar-bg-4 {
+  width: 14px;
+  height: 14px;
+}
+
+.slide-projects .avatar-bg {
+  top: 0;
+  left: 0;
+}
+
+.slide-projects .avatar-bg-2 {
+  top: 0;
+  right: 0;
+}
+
+.slide-projects .avatar-bg-3 {
+  bottom: 0;
+  left: 0;
+}
+
+.slide-projects .avatar-bg-4 {
+  bottom: 0;
+  right: 0;
+}
+
+.projects-info {
+  padding: 16px 8px 0;
+}
+
+.projects-row {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.projects-name {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text-big);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  flex-shrink: 0;
+}
+
+.projects-dots {
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 2px dotted var(--theme-color);
+  line-height: 100%;
+}
+
+.project-type {
+  font-weight: 400;
+  font-size: var(--text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  margin-bottom: 16px;
+}
+
+.projects-desc {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text);
+  text-transform: uppercase;
+  color: var(--grey-color);
+  margin-bottom: 16px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.projects-desc p {
+  margin-bottom: 10px;
+}
+
+.projects-desc p:last-child {
+  margin-bottom: 0px;
+}
+
+.projects-svg {
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.projects-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.projects-svg svg path {
+  fill: var(--theme-color);
+  stroke: var(--theme-color);
+}
+
+.quest-container.quest-container--projects {
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 95%;
+}
+
+.swiper-pagination--projects {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-top: 20px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text-medium);
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+}
+
+.swiper-button-next-projects {
+  position: absolute;
+  right: 30%;
+  top: 40%;
+  transform: translate(0%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-prev-projects {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(0%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-next-projects path,
+.swiper-button-prev-projects path {
+  transition: var(--transition);
+}
+
+.swiper-button-next-projects:hover path,
+.swiper-button-prev-projects:hover path {
+  stroke: var(--theme-color);
+}
+
+.swiper-slide-active .projects-desc,
+.swiper-slide-active .projects-svg {
+  opacity: 1;
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+  background: none;
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+  background: none;
+}
+
+.swiper-slide--projects {
+  opacity: 0.6;
+}
+
+.swiper-slide--projects.swiper-slide-active {
+  opacity: 1;
+}

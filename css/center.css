@@ -17,6 +17,7 @@
 .center-main {
   width: 100%;
   position: relative;
+  max-width: 77%;
 }
 
 .center-right {
@@ -44,6 +45,7 @@
   height: 12px;
   top: -4px;
   left: -1px;
+  z-index: 10;
 }
 
 .avatar-bg-2 {
@@ -52,6 +54,7 @@
   height: 12px;
   top: -4px;
   right: -4px;
+  z-index: 10;
 }
 
 .avatar-bg-3 {
@@ -60,6 +63,7 @@
   height: 12px;
   bottom: -1px;
   left: -1px;
+  z-index: 10;
 }
 
 .avatar-bg-4 {
@@ -68,6 +72,7 @@
   height: 12px;
   bottom: -1px;
   right: -4px;
+  z-index: 10;
 }
 
 .avatar-svg path {
@@ -410,9 +415,11 @@
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.13);
   position: relative;
+  background: #000000;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(232, 74, 74, 0.09) 50%, rgba(0, 0, 0, 0.1) 100%);
 }
 
-.center-wrap img {
+.center-image-home {
   width: 100%;
   max-height: 100%;
   max-width: 100%;
@@ -425,10 +432,10 @@
 
 .center-text {
   position: absolute;
-  top: 8%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 47%;
+  max-width: 100%;
 }
 
 .center-title {
@@ -470,6 +477,7 @@
   overflow: hidden;
   padding-left: 8px;
   background: rgba(36, 36, 37, 0.7);
+  padding-right: 50px;
   padding-top: 4px;
   padding-bottom: 3px;
   transition: var(--transition);
@@ -528,4 +536,13 @@
   bottom: -3.3%;
   left: 50%;
   transform: translate(-50%, 0%);
+}
+
+.block-hero {
+  height: 91%;
+  overflow-y: scroll;
+}
+
+.block-hero::-webkit-scrollbar {
+  width: 0px;
 }/*# sourceMappingURL=center.css.map */
