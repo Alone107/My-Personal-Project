@@ -239,6 +239,7 @@
   font-size: var(--text);
   text-transform: uppercase;
   color: var(--grey-color);
+  transition: var(--transition);
 }
 
 .progress-item-date-row {
@@ -246,6 +247,7 @@
   background: rgba(232, 187, 74, 0.1);
   max-height: 19px;
   height: 100%;
+  transition: var(--transition);
 }
 
 .epic .progress-item-date-row {
@@ -279,12 +281,14 @@
   height: 0;
   opacity: 0;
   transition: var(--transition);
+  width: 0;
 }
 
 #achievementsAchievedProgress.show {
   height: auto;
   opacity: 1;
   margin-bottom: 60px;
+  width: auto;
 }
 
 .achievements-achieved-complete.show {
@@ -413,4 +417,69 @@
 
 .achievements-blocks.todo .filter-todo-span {
   display: block;
+}
+
+.achievements-blocks.todo .achievements-achieved-progress-item {
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  max-width: 120px;
+  margin-bottom: 0;
+  clip-path: none;
+  align-items: center;
+}
+
+.achievements-blocks.todo .achievements-achieved-progress-item:after {
+  display: none;
+}
+
+.achievements-blocks.todo .progress-item-date-row {
+  height: 0;
+  opacity: 0;
+}
+
+.achievements-blocks.todo .progress-item-info-desc {
+  height: 0;
+  opacity: 0;
+}
+
+.achievements-blocks.todo .progress-info-text {
+  padding: 0;
+}
+
+.achievements-blocks.todo .progress-item-info {
+  border: none;
+}
+
+.achievements-blocks.todo .achievements-achieved {
+  display: flex;
+  gap: 18px;
+}
+
+.achievements-blocks.todo .achievements-achieved-progress {
+  display: flex;
+  gap: 18px;
+}
+
+.achievements-blocks.todo .achievements-achieved-progress-title {
+  display: none;
+}
+
+.achievements-blocks.todo #achieved-inprogress {
+  display: flex;
+  gap: 18px;
+}
+
+.achievements-blocks.todo .progress-item-info-title {
+  font-size: var(--text);
+  text-align: center;
+}
+
+.achievements-blocks.todo .progress-item-img img {
+  width: 80px;
+  height: 80px;
+}
+
+.achievements-blocks.todo .progress-item-left {
+  border: 1px solid #333;
 }
