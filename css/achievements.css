@@ -121,10 +121,30 @@
   display: flex;
   margin-bottom: 22px;
   transition: var(--transition);
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+  position: relative;
+}
+
+.achievements-achieved-progress-item:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 0px;
+  left: -3px;
+  top: 4px;
+  transform: rotate(135deg);
+  border-left: 1px solid rgba(255, 255, 255, 0.13);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  transition: var(--transition);
 }
 
 .achievements-achieved-progress-item:hover {
   border: 1px solid rgba(125, 255, 104, 0.49);
+}
+
+.achievements-achieved-progress-item:hover:after {
+  border-color: rgba(125, 255, 104, 0.49);
 }
 
 .achievements-achieved-progress-item:hover .progress-item-quality {

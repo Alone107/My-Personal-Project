@@ -27,6 +27,12 @@ const settingsElements = {
   reset: document.getElementById("btnSettingsReset"),
 };
 
+const projectSingleElements = {
+  button: document.getElementById("singleProductBtnPopup"),
+  popup: document.querySelector(".single-project-popup"),
+  reset: document.getElementById("projectPopupClose"),
+};
+
 // Функция для открытия попапа
 const openPopup = (elements) => {
   elements.popup.classList.add("open");
@@ -75,11 +81,22 @@ settingsElements.button.addEventListener("click", () =>
   openPopupSettings(settingsElements)
 );
 
+if (projectSingleElements.button) {
+  projectSingleElements.button.addEventListener("click", () =>
+    openPopupSettings(projectSingleElements)
+  );
+
+  projectSingleElements.reset.addEventListener("click", () =>
+    closePopupSettings(projectSingleElements)
+  );
+}
+
 // Объединяем обработчики для тени
 sharedElements.shadow.addEventListener("click", () => {
   closePopup(hireElements);
   closePopup(connectElements);
   closePopup(creditsElements);
+  closePopup(projectSingleElements);
 });
 
 // -----------------time---------------------------
@@ -473,11 +490,6 @@ if (swiperProjects) {
       nextEl: ".swiper-button-next-projects",
       prevEl: ".swiper-button-prev-projects",
     },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
   });
 }
 
@@ -486,20 +498,51 @@ const projectInfo = document.querySelector(".single-project-information-text");
 const toggleBtn = document.querySelector(".single-project-show-text");
 
 // Проверяем высоту и устанавливаем начальное состояние
-if (projectInfo.offsetHeight > 200) {
-  projectInfo.setAttribute("data-expanded", "false");
-  projectInfo.classList.add("hidden");
-  toggleBtn.classList.add("show");
+
+if (projectInfo) {
+  if (projectInfo.offsetHeight > 200) {
+    projectInfo.setAttribute("data-expanded", "false");
+    projectInfo.classList.add("hidden");
+    toggleBtn.classList.add("show");
+  }
+
+  // Обработчик события
+  toggleBtn.addEventListener("click", function () {
+    const isExpanded = projectInfo.getAttribute("data-expanded") === "true";
+
+    // Обновляем атрибуты и классы
+    projectInfo.setAttribute("data-expanded", !isExpanded);
+    projectInfo.classList.toggle("hidden");
+
+    // Обновляем текст кнопки
+    toggleBtn.textContent = isExpanded ? "+ expand" : "- expand";
+  });
 }
 
-// Обработчик события
-toggleBtn.addEventListener("click", function () {
-  const isExpanded = projectInfo.getAttribute("data-expanded") === "true";
+const swiperProjectPopup = document.querySelector(".swiper-project-popup");
 
-  // Обновляем атрибуты и классы
-  projectInfo.setAttribute("data-expanded", !isExpanded);
-  projectInfo.classList.toggle("hidden");
+if (swiperProjectPopup) {
+  const swiperProjectPopup = new Swiper(".swiper-project-popup", {
+    // Optional parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination-project-popup",
+      type: "fraction",
+      renderFraction: function (currentClass, totalClass) {
+        return (
+          `<span class="${currentClass}"></span>` +
+          " of " +
+          `<span class="${totalClass}"></span>`
+        );
+      },
+    },
 
-  // Обновляем текст кнопки
-  toggleBtn.textContent = isExpanded ? "+ expand" : "- expand";
-});
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next-project-popup",
+      prevEl: ".swiper-button-prev-project-popup",
+    },
+  });
+}

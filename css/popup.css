@@ -585,4 +585,28 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.single-project-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  width: 100%;
+  transition: all 1.4s;
+  z-index: 10;
+  max-width: 60%;
+  max-height: 80%;
+}
+
+.single-project-popup.open {
+  transform: translate(-50%, -50%);
+}
+
+.swiper-project-popup .swiper-slide {
+  height: auto;
+}
+
+.swiper-project-popup {
+  height: 60vh;
 }/*# sourceMappingURL=popup.css.map */

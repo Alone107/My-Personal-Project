@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Iceberg&family=Iceland&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/global/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/global/style.css" />
   </head>
   <body>
@@ -182,7 +183,8 @@
                 </div>
               </div>
             </div>
-            <div class="center-main">
+
+            <div class="center-main center-quest">
               <div class="center-wrap">
                 <div class="avatar-bg avatar-svg">
                   <svg
@@ -236,16 +238,121 @@
                     />
                   </svg>
                 </div>
-                <img class="center-image-home" src="images/kit.png" alt="" />
-              </div>
-              <div class="center-text">
-                <div class="center-title">
-                  swimming through a vast network of interconnected devices and
-                  servers, spreading joy and whimsy to users across the globe
+                <div class="quest-container block-hero">
+                  <h3 class="about-title">Who is luz wintheiser</h3>
+                  <div class="about-wrapper">
+                    <div class="about-information">
+                      <div class="about-block">
+                        <h4 class="about-title-info">
+                          The short introduction of my life
+                        </h4>
+                        <p>
+                          I have always been fascinated by the endless
+                          possibilities of the internet and the ways it can be
+                          leveraged to make our lives better. I decided to
+                          pursue a career in web engineering to help build
+                          innovative and impactful web-based solutions that can
+                          solve complex problems and make a difference in
+                          people's lives.
+                        </p>
+                      </div>
+                      <div class="about-block">
+                        <h4 class="about-title-info">Career and development</h4>
+                        <p>
+                          Throughout my career, I have worked with a wide range
+                          of technologies, from front-end frameworks like React
+                          and Angular to back-end frameworks like Node.js and
+                          Django. I am passionate about staying up-to-date with
+                          the latest industry trends and tools and continually
+                          learning new skills to improve my craft.
+                        </p>
+                      </div>
+                      <div class="about-block">
+                        <h4 class="about-title-info">
+                          More can be added in the left side for summary
+                        </h4>
+                        <p>
+                          As a web engineer, my top priority is to ensure the
+                          reliability, scalability, and security of the web
+                          applications I develop. I enjoy collaborating with
+                          cross-functional teams and working closely with
+                          clients to understand their needs and provide them
+                          with the best possible solutions.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="about-img-wrapper">
+                      <div class="bg">
+                        <div class="avatar-bg avatar-svg">
+                          <svg
+                            width="9"
+                            height="9"
+                            viewBox="0 0 9 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1 9L1 1L9 1"
+                              stroke="#E84A4A"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                        <div class="avatar-bg-2 avatar-svg">
+                          <svg
+                            width="9"
+                            height="9"
+                            viewBox="0 0 9 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 1L8 1L8 9"
+                              stroke="#E84A4A"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                        <div class="avatar-bg-3 avatar-svg">
+                          <svg
+                            width="9"
+                            height="9"
+                            viewBox="0 0 9 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 8L1 8L0.999999 6.99382e-07"
+                              stroke="#E84A4A"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                        <div class="avatar-bg-4 avatar-svg">
+                          <svg
+                            width="9"
+                            height="9"
+                            viewBox="0 0 9 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8 0L8 8L1.04907e-06 8"
+                              stroke="#E84A4A"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="about-images">
+                        <img src="images/human.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="center-desc">Artwork generated with midjourney</div>
               </div>
             </div>
+
             <div class="center-right">
               <div class="active-quest">
                 <div class="active-quest-row">
@@ -350,7 +457,7 @@
 
             <div class="bottom">
               <nav class="navigation">
-                <div class="navigation-item active">
+                <div class="navigation-item">
                   <a href="home.html" class="navigation-item-link"></a>
                   <div class="navigation-title">
                     beginning
@@ -446,7 +553,7 @@
                     Suscipit est consequatur nemo voluptatem est labore saepe.
                   </div>
                 </div>
-                <div class="navigation-item">
+                <div class="navigation-item active">
                   <a href="about.html" class="navigation-item-link"></a>
                   <div class="navigation-title">
                     about
@@ -558,7 +665,6 @@
           <div class="credits-subtitle">
             Everything involved in this project
           </div>
-
           <div class="credits-row">
             <div class="credits-row-left">developed by</div>
             <div class="credits-row-right">your name here @handle</div>
@@ -703,9 +809,101 @@
           </div>
         </div>
 
+        <div class="single-project-popup">
+          <div class="single-project-popup-subtitle">
+            previewing images from
+          </div>
+          <div class="single-project-popup-title">portfolio design</div>
+          <div class="single-project-popup-block">
+            <div class="project-slider-popup">
+              <div class="swiper swiper-project-popup">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/achieved/item-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/kit.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-popup-btns">
+              <a class="project-popup-link" href="#">view project live</a>
+              <div
+                class="swiper-pagination swiper-pagination-project-popup"
+              ></div>
+              <button
+                id="projectPopupClose"
+                class="project-popup-close"
+                href="#"
+              >
+                CLOSE [esc]
+              </button>
+            </div>
+            <div class="swiper-button-prev-project-popup">
+              <svg
+                width="38"
+                height="72"
+                viewBox="0 0 38 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M37 1L2 36L37 71"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="swiper-button-next-project-popup">
+              <svg
+                width="38"
+                height="72"
+                viewBox="0 0 38 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M1.5 1L36.5 36L1.5 71"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
         <div class="shadow"></div>
       </div>
     </div>
   </body>
+  <script src="js/swiper-bundle.min.js"></script>
+
   <script src="js/main.js"></script>
 </html>

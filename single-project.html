@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Iceberg&family=Iceland&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/global/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/global/style.css" />
   </head>
   <body>
@@ -917,7 +918,7 @@
                     Suscipit est consequatur nemo voluptatem est labore saepe.
                   </div>
                 </div>
-                <div class="navigation-item active">
+                <div class="navigation-item">
                   <a href="quest-log.html" class="navigation-item-link"></a>
                   <div class="navigation-title">
                     Logs
@@ -965,7 +966,7 @@
                     Suscipit est consequatur nemo voluptatem est labore saepe.
                   </div>
                 </div>
-                <div class="navigation-item">
+                <div class="navigation-item active">
                   <a href="#" class="navigation-item-link"></a>
                   <div class="navigation-title">
                     creations
@@ -990,9 +991,9 @@
                   </div>
                 </div>
                 <div class="navigation-item">
-                  <a href="#" class="navigation-item-link"></a>
+                  <a href="about.html" class="navigation-item-link"></a>
                   <div class="navigation-title">
-                    games
+                    about
                     <div class="avatar-rectangle">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -1024,7 +1025,7 @@
             I would love to hear about your projects!
           </div>
           <form class="form-popup" action="">
-            <div class="hire-block">
+            <div class="hire-block popup-mask">
               <div class="hire-row">
                 <label for="hire-name">How should I call you?</label>
                 <input id="hire-name" type="text" placeholder="your name" />
@@ -1063,7 +1064,7 @@
             wanna chat? Or just share something cool?
           </div>
           <form class="form-popup" action="">
-            <div class="connect-block">
+            <div class="connect-block popup-mask">
               <div class="connect-row">
                 <label for="connect-name">How should I call you?</label>
                 <input id="connect-name" type="text" placeholder="your name" />
@@ -1136,7 +1137,7 @@
           <div class="settings-title">visual configurator</div>
           <div class="settings-subtitle">apply what works best for you</div>
 
-          <div class="settings-block">
+          <div class="settings-block popup-mask">
             <div class="settings-row">
               <div class="settings-row-title">
                 <div class="setting-title">HUD HUE</div>
@@ -1245,9 +1246,101 @@
           </div>
         </div>
 
+        <div class="single-project-popup">
+          <div class="single-project-popup-subtitle">
+            previewing images from
+          </div>
+          <div class="single-project-popup-title">portfolio design</div>
+          <div class="single-project-popup-block">
+            <div class="project-slider-popup">
+              <div class="swiper swiper-project-popup">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/achieved/item-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/Rectangle 91.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-slide-popup">
+                      <img src="images/kit.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-popup-btns">
+              <a class="project-popup-link" href="#">view project live</a>
+              <div
+                class="swiper-pagination swiper-pagination-project-popup"
+              ></div>
+              <button
+                id="projectPopupClose"
+                class="project-popup-close"
+                href="#"
+              >
+                CLOSE [esc]
+              </button>
+            </div>
+            <div class="swiper-button-prev-project-popup">
+              <svg
+                width="38"
+                height="72"
+                viewBox="0 0 38 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M37 1L2 36L37 71"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="swiper-button-next-project-popup">
+              <svg
+                width="38"
+                height="72"
+                viewBox="0 0 38 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M1.5 1L36.5 36L1.5 71"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
         <div class="shadow"></div>
       </div>
     </div>
   </body>
+  <script src="js/swiper-bundle.min.js"></script>
+
   <script src="js/main.js"></script>
 </html>
