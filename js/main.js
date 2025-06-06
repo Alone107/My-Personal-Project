@@ -96,7 +96,7 @@ sharedElements.shadow.addEventListener("click", () => {
   closePopup(hireElements);
   closePopup(connectElements);
   closePopup(creditsElements);
-  closePopup(projectSingleElements);
+  closePopupSettings(projectSingleElements);
 });
 
 // -----------------time---------------------------
