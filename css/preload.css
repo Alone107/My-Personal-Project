@@ -29,7 +29,7 @@
 .preload-info-title {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 26px;
+  font-size: var(--text-BIG);
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--theme-color-second);
@@ -39,7 +39,7 @@
 .preload-info-text {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1, 25rem;
   line-height: 130%;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -54,7 +54,7 @@
   max-width: fit-content;
   font-family: var(--second-family);
   font-weight: 743;
-  font-size: 22px;
+  font-size: 1, 375rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--theme-color);

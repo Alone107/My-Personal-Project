@@ -546,3 +546,12 @@ if (swiperProjectPopup) {
     },
   });
 }
+
+const navigationBtnMenu = document.getElementById("navigationBtnMenu");
+const navigation = document.getElementById("navigation");
+
+if (navigation && navigationBtnMenu) {
+  navigationBtnMenu.addEventListener("click", () => {
+    navigation.classList.toggle("show");
+  });
+}

@@ -10,12 +10,12 @@
   --green-color: #7dff68;
   --grey-color: #7a7a7a;
   --transition: all 0.5s;
-  --text-small: 7px;
-  --text-smaller: 12px;
-  --text: 14px;
-  --text-medium: 16px;
-  --text-big: 18px;
-  --text-BIG: 26px;
+  --text-small: 0.625rem;
+  --text-smaller: 0.75rem;
+  --text: 0.875rem;
+  --text-medium: 1rem;
+  --text-big: 1.125rem;
+  --text-BIG: 1.625rem;
   --legendary: #e8bb4a;
   --epic: #e84a4a;
   --rare: #429dd1;
@@ -26,7 +26,6 @@ body {
   font-family: var(--font-family);
   font-weight: 400;
   font-style: normal;
-  font-size: var(--text-medium);
   color: var(--grey-color);
 }
 
@@ -108,4 +107,11 @@ img {
 .shadow.open {
   opacity: 1;
   pointer-events: visible;
+}
+
+@media (max-width: 1350px) {
+  .container-wrap {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
 }/*# sourceMappingURL=main.css.map */

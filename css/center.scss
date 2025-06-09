@@ -468,6 +468,7 @@
   display: flex;
   gap: 15px;
   justify-content: center;
+  transition: var(--transition);
 }
 
 .navigation-title {
@@ -478,7 +479,6 @@
   text-transform: uppercase;
   color: var(--theme-color-second);
   position: relative;
-  overflow: hidden;
   padding-left: 8px;
   background: rgb(36, 36, 37, 0.7);
   padding-right: 50px;
@@ -499,9 +499,10 @@
 
 .navigation-item {
   border-left: 2px solid rgba(36, 36, 37, 0.7);
-  max-width: 17.4%;
   position: relative;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation-item:hover {
@@ -528,12 +529,44 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--theme-color-second);
-  opacity: 0.5;
   padding-left: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 8px;
-  background: rgb(51, 51, 51, 0.1);
+  background: rgb(4 4 4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navigation-desctop-btn {
+  font-family: var(--second-family);
+  font-weight: 743;
+  font-size: var(--text);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--theme-color-second);
+  position: relative;
+  padding-left: 50px;
+  background: var(--theme-color);
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  transition: var(--transition);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0;
+}
+
+.navigation-desctop-btn:hover {
+  background: var(--theme-color-second);
+  color: var(--theme-color);
+}
+
+.navigation-desctop-btn:hover path {
+  fill: var(--theme-color);
 }
 
 .bottom {
@@ -550,4 +583,61 @@
 
 .block-hero::-webkit-scrollbar {
   width: 0px;
+}
+
+.center-left-btn {
+  max-width: 50px;
+}
+
+.center-left-btn svg {
+  max-width: 100%;
+  height: 100%;
+}
+
+.center-left-btn path {
+  fill: var(--theme-color);
+}
+
+.center-left-btn svg g {
+  fill: var(--theme-color);
+}
+
+.center-left-btn {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .navigation {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    flex-direction: column;
+  }
+  .navigation.show {
+    opacity: 1;
+    pointer-events: visible;
+    transform: translate(-50%, -100%);
+    padding: 2em;
+  }
+  .bottom {
+    bottom: -50px;
+  }
+
+  .navigation-desctop-btn {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    opacity: 1;
+    pointer-events: visible;
+  }
+}
+
+@media (max-width: 992px) {
+  .center-left-btn {
+    display: block;
+  }
 }
