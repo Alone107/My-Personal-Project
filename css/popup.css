@@ -597,6 +597,7 @@
   z-index: 10;
   max-width: 60%;
   max-height: 80%;
+  overflow: scroll;
 }
 
 .single-project-popup.open {
