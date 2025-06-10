@@ -218,9 +218,37 @@
   text-transform: uppercase;
   color: var(--theme-color);
   transition: var(--transition);
+  max-width: 120px;
+  width: 100%;
 }
 
 .quest-container {
-  max-width: 80%;
+  max-width: 95%;
   margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .center-title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .center-text {
+    width: 100%;
+    max-width: 75%;
+  }
+  .block-grid {
+    grid-template-columns: 1fr;
+  }
+  .block-grid-item-title {
+    font-size: var(--text);
+  }
+  .visual-btn {
+    font-size: var(--text);
+  }
+  .older-logs li a p {
+    font-size: var(--text);
+  }
+  .block-log-title {
+    font-size: var(--text);
+  }
 }

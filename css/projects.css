@@ -234,4 +234,32 @@
 
 .swiper-slide--projects.swiper-slide-active {
   opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .projects-name {
+    font-size: var(--text);
+  }
+  .project-type {
+    font-size: var(--text-smaller);
+    margin-bottom: 8px;
+  }
+  .projects-desc {
+    font-size: var(--text-smaller);
+    margin-bottom: 8px;
+  }
+  .time-publidshed {
+    font-size: var(--text-smaller);
+  }
+  .project-link {
+    font-size: var(--text-smaller);
+    padding: 5px 8px;
+  }
+}
+@media (max-width: 576px) {
+  .swiper-button-next-projects,
+  .swiper-button-prev-projects {
+    opacity: 0;
+    pointer-events: none;
+  }
 }/*# sourceMappingURL=projects.css.map */

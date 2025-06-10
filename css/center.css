@@ -479,8 +479,9 @@
   background: rgba(36, 36, 37, 0.7);
   padding-right: 50px;
   padding-top: 4px;
-  padding-bottom: 3px;
+  padding-bottom: 8px;
   transition: var(--transition);
+  overflow: hidden;
 }
 
 .active.navigation-item .navigation-title {
@@ -659,6 +660,7 @@
     left: 50%;
     transform: translate(-50%, 200%);
     flex-direction: column;
+    z-index: 10;
   }
   .navigation.show {
     opacity: 1;
@@ -756,6 +758,9 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  .block-hero {
+    height: 95%;
+  }
 }
 @media (max-width: 576px) {
   .center-left {
@@ -771,6 +776,7 @@
     height: 100%;
     margin-top: 2vw;
     overflow: scroll;
+    z-index: 9;
   }
   .center-main {
     max-width: none;
@@ -781,10 +787,41 @@
   .center-text {
     top: 25%;
   }
+  .avatar-block-desc {
+    font-size: var(--text);
+  }
+  .hire {
+    font-size: var(--text);
+  }
+  .description-text {
+    font-size: var(--text);
+  }
 }
 @media (max-width: 450px) {
   .navigation-desctop-btn-mobile--left {
     padding-right: 50px;
     padding-left: 10px;
+  }
+}
+@media (max-height: 700px) {
+  .center-main {
+    height: 75vh;
+  }
+  .center-left {
+    height: 75vh;
+  }
+  .center-right {
+    height: 75vh;
+  }
+  .avatar-block-desc,
+  .hire,
+  .active-quest-name,
+  .setting-sound,
+  .setting-music,
+  .setting-visual {
+    font-size: var(--text);
+  }
+  .description-text {
+    font-size: var(--text-smaller);
   }
 }/*# sourceMappingURL=center.css.map */

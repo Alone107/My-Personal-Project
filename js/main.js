@@ -466,7 +466,7 @@ if (swiperProjects) {
   const swiperProjects = new Swiper(".swiper-projects", {
     // Optional parameters
     centeredSlides: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 0,
     coverflowEffect: {
       rotate: -45,
@@ -478,6 +478,15 @@ if (swiperProjects) {
     },
     effect: "coverflow",
     grabCursor: true,
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+    },
 
     // If we need pagination
     pagination: {

@@ -12,7 +12,7 @@
 .achievements-blocks {
   display: flex;
   gap: 18px;
-  max-width: 90%;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -157,6 +157,10 @@
 
 .progress-item-img {
   padding: 8px 13px 11px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .progress-item-left {
@@ -485,4 +489,61 @@
 
 .achievements-blocks.todo .progress-item-left {
   border: 1px solid #333;
+}
+
+@media (max-width: 1200px) {
+  .achievements-blocks {
+    flex-direction: column;
+  }
+  .achievements-progress {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+  }
+  .progress-block-wrap {
+    max-width: 180px;
+    width: 100%;
+  }
+  .achievements-filtr {
+    order: 2;
+  }
+  .achievements-achieved {
+    order: 3;
+  }
+  .achievements-filtr {
+    display: flex;
+    max-width: none;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .filtr-row {
+    margin-bottom: 0;
+  }
+  .achievements-blocks.todo .achievements-achieved {
+    order: 3;
+  }
+  .achievements-blocks.todo .progress-item-info-title {
+    font-size: var(--text-smaller);
+  }
+}
+@media (max-width: 576px) {
+  .progress-item-img {
+    padding: 4px 8px 6px 12px;
+  }
+  .progress-item-info-title {
+    font-size: var(--text);
+  }
+  .progress-info-text {
+    padding: 12px 7px 7px 12px;
+  }
+  .progress-item-info-desc {
+    font-size: var(--text-smaller);
+  }
+  #achievementsAchievedProgress.show {
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=achievements.css.map */

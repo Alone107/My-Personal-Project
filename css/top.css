@@ -160,7 +160,7 @@
   max-width: 50px;
   max-height: 50px;
   position: absolute;
-  z-index: 10;
+  z-index: 9;
 }
 
 .top-mobile svg {
@@ -229,6 +229,13 @@
     width: auto;
     height: auto;
     transform: translateY(0%);
+  }
+  .level p {
+    font-size: var(--text);
+  }
+  .level span,
+  .coins-info span {
+    font-size: var(--text-medium);
   }
 }
 @media (max-width: 420px) {
