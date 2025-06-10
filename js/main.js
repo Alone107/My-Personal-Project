@@ -547,11 +547,75 @@ if (swiperProjectPopup) {
   });
 }
 
+// Получаем все элементы DOM с проверкой существования
 const navigationBtnMenu = document.getElementById("navigationBtnMenu");
+const navigationBtnMenuLeft = document.getElementById("navigationBtnMenuLeft");
+const navigationBtnMenuRight = document.getElementById(
+  "navigationBtnMenuRight"
+);
 const navigation = document.getElementById("navigation");
+const centerLeft = document.getElementById("centerLeft");
+const centerRight = document.getElementById("centerRight");
 
-if (navigation && navigationBtnMenu) {
+const bottomMobileMenu = document.querySelector(".bottom-mobile");
+
+if (bottomMobileMenu) {
+  // Объект для управления состоянием меню
+  const menuStateManager = {
+    currentActive: null,
+    toggleMenu(element) {
+      // Если нажата та же кнопка (текущий элемент уже активен)
+      if (this.currentActive === element) {
+        // Скрываем текущий элемент
+        this.currentActive.classList.remove("show");
+        this.currentActive = null;
+      } else {
+        // Сначала прячем текущий активный элемент
+        if (this.currentActive) {
+          this.currentActive.classList.remove("show");
+        }
+
+        // Показываем новый элемент
+        if (element) {
+          element.classList.add("show");
+        }
+
+        // Обновляем состояние
+        this.currentActive = element;
+      }
+    },
+  };
+
+  // Добавляем обработчики кликов
   navigationBtnMenu.addEventListener("click", () => {
-    navigation.classList.toggle("show");
+    menuStateManager.toggleMenu(navigation);
+  });
+
+  navigationBtnMenuLeft.addEventListener("click", () => {
+    menuStateManager.toggleMenu(centerLeft);
+  });
+
+  navigationBtnMenuRight.addEventListener("click", () => {
+    menuStateManager.toggleMenu(centerRight);
+  });
+}
+
+const topMobile = document.getElementById("topMobile");
+const topWrap = document.querySelector(".top");
+
+if (topMobile) {
+  // Ваш существующий обработчик
+  topMobile.addEventListener("click", () => {
+    topWrap.classList.toggle("show");
+  });
+
+  // Добавляем обработчик для клика вне элемента
+  document.addEventListener("click", function (event) {
+    const isClickInside =
+      topMobile.contains(event.target) || topWrap.contains(event.target);
+
+    if (!isClickInside && topWrap.classList.contains("show")) {
+      topWrap.classList.remove("show");
+    }
   });
 }
