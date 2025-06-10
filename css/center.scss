@@ -773,17 +773,22 @@
 @media (max-width: 576px) {
   .center-left {
     max-width: none;
-    height: 88vh;
+    max-height: 88vh;
+    height: 100%;
     margin-top: 2vw;
+    overflow: scroll;
   }
   .center-right {
     max-width: none;
-    height: 88vh;
+    max-height: 88vh;
+    height: 100%;
     margin-top: 2vw;
+    overflow: scroll;
   }
   .center-main {
     max-width: none;
-    height: 88vh;
+    max-height: 88vh;
+    height: 100%;
     margin-top: 2vw;
   }
   .center-text {
