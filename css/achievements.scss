@@ -123,6 +123,31 @@
   transition: var(--transition);
   clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
   position: relative;
+  pointer-events: visible;
+  width: auto;
+  height: auto;
+}
+
+.achievements-achieved-progress-item.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  position: absolute;
+}
+
+.achievements-blocks.todo
+  .achievements-achieved-progress-item.hidden
+  .progress-item-left {
+  border: none;
+}
+
+.achievements-blocks.todo
+  .achievements-achieved-progress-item.hidden
+  .progress-item-img {
+  padding: 0;
 }
 
 .achievements-achieved-progress-item:after {
@@ -300,7 +325,7 @@
   opacity: 1;
 }
 
-.achievements-achieved-complete .achievements-achieved-progress-item {
+.achievements-achieved-progress-item.not-complete {
   opacity: 0.4;
 }
 
@@ -375,10 +400,6 @@
   padding: 0;
 }
 
-.achievements-blocks.todo .achievements-achieved {
-  order: 1;
-}
-
 .achievements-blocks.todo .achievements-filtr {
   margin-top: 0;
   display: flex;
@@ -388,6 +409,7 @@
   position: relative;
   padding: 9px 3px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .achievements-blocks.todo .achievements-filtr:after {
@@ -458,6 +480,8 @@
 .achievements-blocks.todo .achievements-achieved {
   display: flex;
   gap: 18px;
+  flex-wrap: wrap;
+  order: 1;
 }
 
 .achievements-blocks.todo .achievements-achieved-progress {
@@ -466,7 +490,7 @@
 }
 
 .achievements-blocks.todo .achievements-achieved-progress-title {
-  display: none;
+  display: none !important;
 }
 
 .achievements-blocks.todo #achieved-inprogress {
@@ -543,5 +567,15 @@
   }
   #achievementsAchievedProgress.show {
     margin-bottom: 30px;
+  }
+  .progress-item-left {
+    max-width: 85px;
+  }
+  .achievements-blocks.todo .progress-item-img img {
+    width: 50px;
+    height: 50px;
+  }
+  .achievements-blocks.todo .achievements-achieved {
+    justify-content: center;
   }
 }

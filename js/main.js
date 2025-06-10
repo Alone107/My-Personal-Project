@@ -373,15 +373,14 @@ if (sliderTwoColor) {
 
 //--------------filtr-achievements---------------------
 
-const achievementsAchievedComplete = document.querySelector(
-  ".achievements-achieved-complete"
-);
-
-const achievementsAchievedProgress = document.getElementById(
-  "achievementsAchievedProgress"
+const achivmentsBlock = document.querySelectorAll(
+  ".achievements-achieved-progress-item"
 );
 
 const achievementsBlocks = document.getElementById("achievementsBlocks");
+
+const completeTitleAchived = document.getElementById("completeTitle");
+const NotcompleteTitleAchived = document.getElementById("NotCompleteTitle");
 
 const inputFiltrAchieved = document.getElementById("achieved-input");
 const inputFiltrInProgress = document.getElementById("in-progress-input");
@@ -391,9 +390,19 @@ const inputFiltrTodo = document.getElementById("todo-input");
 if (inputFiltrAchieved) {
   inputFiltrAchieved.addEventListener("input", function () {
     if (inputFiltrAchieved.checked == true) {
-      achievementsAchievedComplete.classList.add("show");
+      achivmentsBlock.forEach((block) => {
+        if (block.classList.contains("complete")) {
+          block.classList.remove("hidden");
+        }
+      });
+      completeTitleAchived.style.display = "block";
     } else {
-      achievementsAchievedComplete.classList.remove("show");
+      achivmentsBlock.forEach((block) => {
+        if (block.classList.contains("complete")) {
+          block.classList.add("hidden");
+        }
+      });
+      completeTitleAchived.style.display = "none";
     }
   });
 }
@@ -401,9 +410,19 @@ if (inputFiltrAchieved) {
 if (inputFiltrInProgress) {
   inputFiltrInProgress.addEventListener("input", function () {
     if (inputFiltrInProgress.checked == true) {
-      achievementsAchievedProgress.classList.add("show");
+      achivmentsBlock.forEach((block) => {
+        if (block.classList.contains("not-complete")) {
+          block.classList.remove("hidden");
+        }
+      });
+      NotCompleteTitle.style.display = "block";
     } else {
-      achievementsAchievedProgress.classList.remove("show");
+      achivmentsBlock.forEach((block) => {
+        if (block.classList.contains("not-complete")) {
+          block.classList.add("hidden");
+        }
+      });
+      NotCompleteTitle.style.display = "none";
     }
   });
 }
@@ -420,10 +439,7 @@ if (inputFiltrTodo) {
 
 // -----------------progress-circle----------------------
 
-const achivmentsBlock = document.querySelectorAll(
-  ".achievements-achieved-progress-item"
-);
-const filterTwo = document.getElementById("achieved-inprogress");
+const filterTwo = document.querySelectorAll(".complete");
 
 const circle = document.querySelector(".progress-ring-circle");
 
@@ -443,12 +459,12 @@ if (circle) {
   let allChallenge = achivmentsBlock.length;
   let finishChallenge = 0;
 
-  for (let i = 0; i < filterTwo.childNodes.length; i++) {
-    if (filterTwo.childNodes[i].tagName == "DIV") {
+  achivmentsBlock.forEach((block) => {
+    if (block.classList.contains("complete")) {
       finishChallenge++;
     }
     finishChallenge;
-  }
+  });
 
   let percents = Math.round((finishChallenge / allChallenge) * 100);
   document.querySelector(
