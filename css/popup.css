@@ -609,4 +609,41 @@
 
 .swiper-project-popup {
   height: 60vh;
+}
+
+@media (max-width: 576px) {
+  .hire-popup,
+  .connect-popup,
+  .credits-popup {
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .settings-popup {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .credits-popup {
+    background: #000;
+    padding-top: 10px;
+  }
+  .hire-row textarea,
+  .connect-row textarea {
+    min-height: 120px;
+  }
+  .hire-row {
+    margin-bottom: 16px;
+  }
+  .popup-mask {
+    padding: 15px 16px 16px;
+  }
+  .hire-buttons,
+  .connect-buttons,
+  .settings-buttons {
+    flex-direction: column;
+  }
+  .credits-row {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 }/*# sourceMappingURL=popup.css.map */
